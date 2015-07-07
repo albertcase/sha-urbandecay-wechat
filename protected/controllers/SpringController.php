@@ -1,11 +1,13 @@
 <?php
 
-class SiteController extends Controller
+class SpringController extends Controller
 {
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
+	public $layout ="//layouts/spring";
+
 	public function actionIndex()
 	{
 		$this->render('index');

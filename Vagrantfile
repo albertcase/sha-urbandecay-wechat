@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu12.04-givenchy-beauty"
 
-  config.vm.hostname = "Urban Decay Wechat"
+  config.vm.hostname = "Urban-Decay-Wechat"
 
   config.vm.network :forwarded_port, guest: 80, host: 9030
   config.vm.network :forwarded_port, guest: 3306, host: 33093
