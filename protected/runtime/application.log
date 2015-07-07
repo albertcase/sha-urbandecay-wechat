@@ -7141,3 +7141,135 @@ Stack trace:
 REQUEST_URI=/system/login/login
 HTTP_REFERER=http://127.0.0.1:9027/system/login
 ---
+2015/07/07 16:01:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "css" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('css')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('css')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/css/reset....')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/css/reset.css
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:01:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "css" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('css')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('css')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/css/main.c...')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/css/main.css
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:01:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('js')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/js/jquery.js
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:02:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('js')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/js/jquery.js
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:02:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "css" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('css')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('css')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/css/main.c...')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/css/main.css
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:02:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "css" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('css')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('css')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/css/reset....')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/css/reset.css
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:03:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "css" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('css')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('css')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/css/reset....')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/css/reset.css
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:03:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('js')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/js/jquery.js
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:03:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "css" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('css')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('css')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/css/main.c...')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/css/main.css
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:04:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "css" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('css')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('css')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/css/reset....')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/css/reset.css
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:04:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "css" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('css')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('css')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/css/main.c...')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/css/main.css
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---
+2015/07/07 16:04:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('js')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/js/jquery....')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/js/jquery.js
+HTTP_REFERER=http://192.168.8.110:9030/site/index
+---

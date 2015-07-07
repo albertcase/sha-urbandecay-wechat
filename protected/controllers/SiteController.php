@@ -6,9 +6,24 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
+
+    public $layout='//layouts/main';
+
 	public function actionIndex()
 	{
 		$this->render('index');
+	}
+
+	public function actionProduct(){
+		$this->render('product');
+	}
+
+	public function actionFounder(){
+		$this->render('founder');
+	}
+
+	public function actionHistory(){
+		$this->render('history');
 	}
 
 	public function actionStore($id)
