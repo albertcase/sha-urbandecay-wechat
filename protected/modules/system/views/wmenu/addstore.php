@@ -69,6 +69,38 @@ $cs->registerScriptFile($baseUrl.'/js/jquery.fineuploader-3.7.0.min.js');
 						<input type="text" id="SystemWmenuAddstoreLng" name="SystemWmenuAddstoreLng" value="">
 					</td>
 				</tr>
+
+				<tr>
+					<td style="text-align:right;" class="row">图片：</td>
+					<td style="text-align:left;" class="row">
+						<div id="SystemWmenuAddStoreSimgShowArea">
+							<img src="" id="SystemWmenuAddStoreSimgShow">
+						</div>
+						<div id="SystemWmenuAddStoreSimgBut" style="width:120px">
+							<div id="SystemWmenuAddStoreSimgProcessing" style="display:none">
+								<img id="SystemWmenuAddStoreSimgShow" src="<?php echo $baseUrl?>/images/system/processing.gif" style="width: 20px;">
+							</div>
+							<div id="SystemWmenuAddStoreSimgButText" style="padding:10px 0 10px 0;"><a href="javascript:void(0)" class="easyui-linkbutton" >点击上传图片</a></div>
+						</div>
+						<input type="hidden" value="" name="SystemWmenuAddStoreSimg" id="SystemWmenuAddStoreSimg">
+					</td>
+				</tr>
+
+				<tr>
+					<td style="text-align:right;" class="row">地图：</td>
+					<td style="text-align:left;" class="row">
+						<div id="SystemWmenuAddStoreBimgShowArea">
+							<img src="" id="SystemWmenuAddStoreBimgShow">
+						</div>
+						<div id="SystemWmenuAddStoreBimgBut" style="width:120px">
+							<div id="SystemWmenuAddStoreBmgProcessing" style="display:none">
+								<img id="SystemWmenuAddStoreBimgShow" src="<?php echo $baseUrl?>/images/system/processing.gif" style="width: 20px;">
+							</div>
+							<div id="SystemWmenuAddStoreBimgButText" style="padding:10px 0 10px 0;"><a href="javascript:void(0)" class="easyui-linkbutton" >点击上传图片</a></div>
+						</div>
+						<input type="hidden" value="" name="SystemWmenuAddStoreBimg" id="SystemWmenuAddStoreBimg">
+					</td>
+				</tr>
 				<tr>
 					<td colspan="2" style="text-align:center;width:200px" class="row">
 						<a href="javascript:void(0)" class="easyui-linkbutton" onclick="systemWmenuAddstore.submitForm()">提交</a>
@@ -86,47 +118,25 @@ $cs->registerScriptFile($baseUrl.'/js/jquery.fineuploader-3.7.0.min.js');
 											height: parseInt($('#tt .panel').css('height')),
 											title: '添加门店',  
 										});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-			systemWmenuAddstore.createUploader('SystemWmenuAddstoreSimg');
-			
-		},
-		getstore:function(){
-			var formdata = {
-				sceneId : $("input[name='SystemWmenuAddstoreSceneId']").val()
-			}
-			if(!formdata.sceneId){
-				$.messager.alert('系统消息',"请输入场景值",'error');
-				return false;
-			}
-			if(formdata.sceneId<=0||formdata.sceneId>100000){
-				$.messager.alert('系统消息',"场景值范围在1~100000之间",'error');
-				return false;
-			}
-			$.ajax({
-				type:"POST",
-				global:false,
-				url:BASEUSER+'/system/wmenu/getstore',
-				data:formdata,
-				dataType:"JSON",
-				success:function(data){					
-					$("#SystemWmenuAddstoreTicket").val(data.ticket);
-					$("#SystemWmenuAddstoreImgArea img").attr("src","https://mp.weixin.qq.com/cgi-bin/showstore?ticket="+data.ticket)
-
-				}
-			});
+			systemWmenuAddstore.createUploader('SystemWmenuAddStoreSimg');
+			systemWmenuAddstore.createUploader('SystemWmenuAddStoreBimg');
 			
 		},
 		submitForm:function(){			
 			var formdata = {
-				bak : $("#SystemWmenuAddstoreBak").val(),
-				sceneId : $("input[name='SystemWmenuAddstoreSceneId']").val(),
-				ticket : $("#SystemWmenuAddstoreTicket").val()
+				country : $("#SystemWmenuAddstoreCountry").val(),
+				city : $("#SystemWmenuAddstoreCity").val(),
+				name : $("#SystemWmenuAddstoreName").val(),
+				address : $("#SystemWmenuAddstoreAddress").val(),
+				telphone : $("#SystemWmenuAddstoreTelphone").val(),
+				open : $("#SystemWmenuAddstoreOpen").val(),
+				lat : $("#SystemWmenuAddstoreLat").val(),
+				lng : $("#SystemWmenuAddstoreLng").val(),
+				picUrl: $("#SystemWmenuAddStoreSimg").val(),
+				mapUrl: $("#SystemWmenuAddStoreBimg").val()
 			}
-			if(!formdata.bak){
-				$.messager.alert('系统消息',"请输入二维码说明",'error');
-				return false;
-			}
-			if(!formdata.ticket){
-				$.messager.alert('系统消息',"请先生成二维码后再提交",'error');
+			if(!formdata.name){
+				$.messager.alert('系统消息',"请输入门店名称",'error');
 				return false;
 			}
 			$.ajax({
@@ -138,7 +148,7 @@ $cs->registerScriptFile($baseUrl.'/js/jquery.fineuploader-3.7.0.min.js');
 				success:function(data){					
 					if(data.code==1){						
 						$.messager.alert('系统消息',data.msg);
-						$('#tt').tabs('close','添加二维码').tabs("select","二维码列表");
+						$('#tt').tabs('close','添加门店').tabs("select","门店列表");
 						$('#systemWmenustoreDatagrid').datagrid('reload');
 					}else{
 						$.messager.alert('系统消息',data.msg,'error');
