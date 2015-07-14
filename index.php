@@ -1,4 +1,4 @@
-<?php
+<?php 
 date_default_timezone_set('PRC');
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/protected/framework/yii.php';
@@ -17,3 +17,4 @@ session_start();
 
 require_once($yii);
 Yii::createWebApplication($config)->run();
+?>
