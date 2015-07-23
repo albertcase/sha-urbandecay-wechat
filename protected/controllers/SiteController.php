@@ -28,6 +28,9 @@ class SiteController extends Controller
 	public function actionHistory(){
 		$this->render('history');
 	}
+	public function actionNewproduct(){
+		$this->render('newproduct');
+	}
 
 	public function actionStore($id)
 	{

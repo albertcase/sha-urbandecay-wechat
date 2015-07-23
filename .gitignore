@@ -1,5 +1,6 @@
 .DS_Store
 .vagrant
 /protected/config/main.php
+/protected/runtime/application.log
 /assets/
 /upload/
