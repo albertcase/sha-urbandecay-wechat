@@ -25,7 +25,9 @@ class SiteController extends Controller
 	public function actionFounder(){
 		$this->render('founder');
 	}
-
+	public function actionNews(){
+		$this->render('news');
+	}
 	public function actionHistory(){
 		$this->render('history');
 	}
