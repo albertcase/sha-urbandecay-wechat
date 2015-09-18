@@ -37,6 +37,9 @@ class SiteController extends Controller
     public function actionAirport(){
     	$this->render('airport');
     }
+    public function actionVideo(){
+    	$this->render('video');
+    }
 	public function actionStore($id)
 	{
 		$sql = "select * from same_store where id = ".intval($id);
