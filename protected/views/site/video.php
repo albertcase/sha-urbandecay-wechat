@@ -16,7 +16,7 @@
 <script type="text/javascript">
 var video = new WxMoment.Video({
 	vid: "t0166wh2607",
-	pic: "<?php echo Yii::app()->request->baseUrl; ?>/images/UD/1.jpg",
+	pic: "<?php echo Yii::app()->request->baseUrl; ?>/images/UD/video_kv.jpg",
 	isHtml5ControlAlwaysShow:1,
 	onplay: function(){
 		
